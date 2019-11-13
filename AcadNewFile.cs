@@ -61,15 +61,15 @@ namespace Console_Test
                 Console.WriteLine($"Имя нового файла {NewName}");
             }
 
-            //try { lastfolder.CopyFile(Template.ID, folder.ID, 0, NewName); }
-            //catch 
-            //{
-            //    numberOfDwg++;
-            //    if (numberOfDwg.ToString().Length == 5)
-            //        NewName = String.Format($"{numberOfDwg:00000}.{DateTime.Now:MM.yy}.01.dwg");
-            //    else NewName = String.Format($"{numberOfDwg:0000}.{DateTime.Now:MM.yy}.01.dwg");
-            //    Console.WriteLine($"Имя нового файла {NewName}");
-            //}
+            try { lastfolder.CopyFile(Template.ID, folder.ID, 0, NewName); }
+            catch 
+            {
+                numberOfDwg++;
+                if (numberOfDwg.ToString().Length == 5)
+                    NewName = String.Format($"{numberOfDwg:00000}.{DateTime.Now:MM.yy}.01.dwg");
+                else NewName = String.Format($"{numberOfDwg:0000}.{DateTime.Now:MM.yy}.01.dwg");
+                Console.WriteLine($"Имя нового файла {NewName}");
+            }
             
         }
 
